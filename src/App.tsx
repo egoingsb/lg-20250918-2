@@ -16,7 +16,10 @@ function Counter({ title, initValue }: CounterProps) {
         <>
             <h1 style={design}>{title}</h1>
             <input type="number" value={step} onChange={changeHandler} />
-            <button onClick={up}>+{step}</button> {countValue}
+            <button className="red-btn" onClick={up}>
+                +{step}
+            </button>{" "}
+            {countValue}
         </>
     );
 }
