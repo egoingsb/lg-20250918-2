@@ -5,9 +5,7 @@ type CounterProps = {
     initValue: number;
 };
 function Counter({ title, initValue }: CounterProps) {
-    const count = useState(initValue);
-    const countValue = count[0];
-    const countChange = count[1];
+    const [countValue, countChange] = useState(initValue);
     function up() {
         countChange(countValue + 1);
     }
