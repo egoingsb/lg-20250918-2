@@ -6,9 +6,7 @@ type CounterProps = {
 };
 function Counter({ title, initValue }: CounterProps) {
     const [countValue, countChange] = useState(initValue);
-    function up() {
-        countChange(countValue + 1);
-    }
+    const up = () => countChange(countValue + 1);
     return (
         <>
             <h1>{title}</h1>
