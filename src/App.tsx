@@ -11,9 +11,10 @@ function Counter({ title, initValue }: CounterProps) {
     const changeHandler = (evt: React.ChangeEvent<HTMLInputElement>) => {
         setStep(Number(evt.target.value));
     };
+    const design = { textDecoration: "underline" };
     return (
         <>
-            <h1>{title}</h1>
+            <h1 style={design}>{title}</h1>
             <input type="number" value={step} onChange={changeHandler} />
             <button onClick={up}>+{step}</button> {countValue}
         </>
