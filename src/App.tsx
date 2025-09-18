@@ -3,11 +3,11 @@ type CounterProps = {
     title: string;
     initValue: string;
 };
-function Counter(props: CounterProps) {
+function Counter({ title, initValue }: CounterProps) {
     return (
         <>
-            <h1>{props.title}</h1>
-            <button>+1</button> {props.initValue}
+            <h1>{title}</h1>
+            <button>+1</button> {initValue}
         </>
     );
 }
