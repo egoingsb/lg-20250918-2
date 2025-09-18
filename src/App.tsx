@@ -1,7 +1,7 @@
 import "./App.css";
 type CounterProps = {
     title: string;
-    initValue: string;
+    initValue: number;
 };
 function Counter({ title, initValue }: CounterProps) {
     return (
@@ -15,8 +15,8 @@ function Counter({ title, initValue }: CounterProps) {
 function App() {
     return (
         <>
-            <Counter title="카운터" initValue="10"></Counter>
-            <Counter title="불면증 카운터" initValue="20"></Counter>
+            <Counter title="카운터" initValue={10}></Counter>
+            <Counter title="불면증 카운터" initValue={20}></Counter>
         </>
     );
 }
