@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { Button } from "@mui/material";
 type CounterProps = {
     title: string;
     initValue: number;
@@ -16,9 +17,9 @@ function Counter({ title, initValue }: CounterProps) {
         <>
             <h1 style={design}>{title}</h1>
             <input type="number" value={step} onChange={changeHandler} />
-            <button className="red-btn" onClick={up}>
+            <Button variant="contained" onClick={up}>
                 +{step}
-            </button>{" "}
+            </Button>{" "}
             {countValue}
         </>
     );
