@@ -6,11 +6,16 @@ type CounterProps = {
 };
 function Counter({ title, initValue }: CounterProps) {
     const [countValue, countChange] = useState(initValue);
-    const up = () => countChange(countValue + 1);
+    const [step, setStep] = useState(10);
+    const up = () => countChange(countValue + step);
+    const changeHandler = (evt: React.ChangeEvent<HTMLInputElement>) => {
+        setStep(Number(evt.target.value));
+    };
     return (
         <>
             <h1>{title}</h1>
-            <button onClick={up}>+1</button> {countValue}
+            <input type="number" value={step} onChange={changeHandler} />
+            <button onClick={up}>+{step}</button> {countValue}
         </>
     );
 }
